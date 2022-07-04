@@ -117,17 +117,16 @@ h2 {
 .icon-phone,
 .icon-mail {
   margin-right: 10px;
-  fill: var(--paragraph-color);
 }
-.icon-mail:hover,
-.icon-phone:hover {
-  fill: var(--brand-color);
-}
+
 .page:hover {
   color: var(--brand-color);
 }
 .contact:hover {
   color: var(--brand-color);
+}
+a > .mword {
+  stroke: currentColor;
 }
 
 /*main*/
@@ -246,44 +245,43 @@ h2 {
 }
 
 /*lorem*/
-.icon-list {
+.lorem-list {
   display: flex;
-  padding: 0;
   justify-content: center;
-  margin-bottom: 30px;
-}
-.icon-list li:not(:last-child) {
-  margin-right: 30px;
+  margin-left: -30px;
+  margin-bottom: -30px;
 }
 
-.icon-list_item {
-  width: 270px;
-  height: 120px;
-  border-radius: 4px;
-  background-color: var(--text-color);
+.lorem-item {
+  margin-left: 30px;
+  margin-bottom: 30px;
+  max-width: 270px;
+}
+
+.icon-place {
   display: flex;
   justify-content: center;
-  align-items: center;
-  margin-right: 0;
+  height: 120px;
+  padding: 25px 0;
+  border-radius: 4px;
+  margin-bottom: 30px;
+  background-color: var(--text-color);
 }
-.icon-rep {
+.icon-lorem {
   width: 70px;
   height: 70px;
 }
+
 .lorem {
   font-size: 14px;
   font-weight: 700;
   line-height: 0.88;
-  display: inline-block;
+  padding-bottom: 10px;
 }
 .lorem-text {
   font-size: 14px;
   line-height: 1.71;
 }
-.lorem-list-first {
-  display: flex;
-}
-
 /*portfolio*/
 
 .example-list {
@@ -303,6 +301,38 @@ h2 {
   box-shadow: 1px 4px 6px 0px #00000029, 0px 4px 4px 0px #0000000f,
     0px 1px 1px 0px #0000001f;
 }
+
+.window-desc:hover .description,
+.window-desc:active .description,
+.window-desc:focus .description {
+  transform: translatey(0);
+}
+.window-desc {
+  position: relative;
+  overflow: hidden;
+}
+.description {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--brand-color);
+  opacity: 90%;
+  transform: translatey(100%);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  padding-left: 24px;
+  padding-right: 45px;
+  padding-top: 49px;
+  padding-bottom: 49px;
+}
+.description p {
+  color: #fff;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.56;
+}
+
 .example-border {
   border-right: 1px solid #eeeeee;
   border-bottom: 1px solid #eeeeee;
@@ -321,9 +351,6 @@ h2 {
   padding: 4px 24px 20px 24px;
 }
 
-.example-list img {
-  margin-bottom: 15px;
-}
 /*team*/
 .team-list_title {
   font-weight: 500;
@@ -528,6 +555,9 @@ footer {
   background-color: var(--brand-color);
 }
 
+footer address {
+  margin-top: 20px;
+}
 /*modal*/
 
 .modal-backdrop {
