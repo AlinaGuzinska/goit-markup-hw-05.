@@ -203,8 +203,6 @@ a > .mword {
   color: var(--text-color);
   background: var(--brand-color);
 
-  box-shadow: 0 5px 5px var(--brand-color);
-
   line-height: 1.876;
   width: 200px;
   height: 50px;
@@ -212,6 +210,12 @@ a > .mword {
   top: 430px;
 }
 
+.button-order:hover {
+  box-shadow: 0 5px 5px var(--brand-color);
+  background-color: white;
+  color: var(--brand-color);
+  transition-duration: 2s;
+}
 /*work*/
 
 .work-images-list {
